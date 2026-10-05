@@ -1,0 +1,18 @@
+--- a/plasma-windowed/plasmawindowedview.cpp
++++ b/plasma-windowed/plasmawindowedview.cpp
+@@ -28,13 +28,14 @@
+     , m_statusNotifier(nullptr)
+     , m_withStatusNotifier(false)
+ {
++    setColor(Qt::transparent);
+     engine()->rootContext()->setContextProperty(QStringLiteral("root"), contentItem());
+     // access appletInterface.Layout.minimumWidth, to create the Layout attached object for appletInterface as a sideeffect
+     QQmlExpression *expr = new QQmlExpression(
+         engine()->rootContext(),
+         contentItem(),
+         QStringLiteral("Qt.createQmlObject('import QtQuick; import QtQuick.Layouts; import org.kde.kirigami as Kirigami; "
+-                       "Rectangle {color: Kirigami.Theme.backgroundColor; anchors.fill:parent; "
++                       "Rectangle {color: \"transparent\"; anchors.fill:parent; "
+                        "property Item appletInterface; onAppletInterfaceChanged: print(appletInterface?.Layout.minimumWidth)}', root, \"\");"));
+     m_rootObject = expr->evaluate().value<QQuickItem *>();
+ }
