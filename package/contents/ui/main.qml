@@ -18,7 +18,7 @@ PlasmoidItem {
 
     readonly property bool debug: false
 
-    readonly property int mainWidth: 478 //540
+    readonly property int mainWidth: 540 //478
     readonly property int mainHeight: 478
 
     state: "small"

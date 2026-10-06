@@ -22,7 +22,7 @@ Item {
             name: "out";
             PropertyChanges {
                 target: clock;
-                x: -9 * parentContainer.scaleFactor
+                x: 0 * parentContainer.scaleFactor
                 y: 42 * parentContainer.scaleFactor
             }
         },
