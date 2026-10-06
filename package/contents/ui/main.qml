@@ -21,7 +21,7 @@ PlasmoidItem {
     readonly property int mainWidth: 478 //540
     readonly property int mainHeight: 478
 
-    state: plasmoid.configuration.mainState
+    state: "small"
 
     width: mainWidth
     height: mainHeight
